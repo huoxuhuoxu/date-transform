@@ -1,6 +1,6 @@
 {
   "name": "date-transform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "日期转换",
   "main": "index.js",
   "scripts": {

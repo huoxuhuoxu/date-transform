@@ -55,18 +55,18 @@ const date_transform = function(timestamp, timeZone){
     var iHour = iTotalHour%24;                
     var iTotalDate = Math.floor(iTotalHour/24);   
 
-    // // 以四年为单位计算, 剩下需要反算的天数, 实际的年数 * 4
+    // 以四年为单位计算, 剩下需要反算的天数, 实际的年数 * 4
     var iFourDay = (365*3+366);                 
     var iTotalFullYear = iTotalDate%iFourDay;    
     var iFullYear = Math.floor(iTotalDate/iFourDay); 
-    // // 实际的年份 1970
+    // 实际的年份 1970
     var iYearObj = getFullYear(iTotalFullYear);
     iFullYear =  iFullYear * 4 + iYearObj.y + 1970;
 
-    // // 实际剩下 天数 推算 月份 
+    // 实际剩下 天数 推算 月份 
     var iMonthDate = getDate(iYearObj);
 
-    var a =  {
+    return {
         year: iFullYear,
         month: iMonthDate.m,
         date: iMonthDate.d,
